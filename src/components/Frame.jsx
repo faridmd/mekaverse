@@ -120,17 +120,18 @@ export default function Frame({ children }) {
 
   // Bottom navigation state
   const [bottomNav, setBottomNav] = React.useState(() => {
-    if (location.pathname === "/") return 0;
-    if (location.pathname === "/ar") return 1;
+    if (location.pathname === "/ar") return 0;
+    if (location.pathname === "/") return 1;
     if (location.pathname === "/materi") return 2;
-    if (
-      location.pathname === "/machine" ||
-      location.pathname === "/material" ||
-      location.pathname === "/inventory"
-    )
-      return 3;
-    return 0;
+    return 1;
   });
+
+  // Sinkronkan bottomNav dengan path saat location berubah
+  React.useEffect(() => {
+    if (location.pathname === "/ar") setBottomNav(0);
+    else if (location.pathname === "/") setBottomNav(1);
+    else if (location.pathname === "/materi") setBottomNav(2);
+  }, [location.pathname]);
 
   // Handler untuk bottom navigation
   const handleBottomNavChange = (event, newValue) => {
@@ -385,13 +386,7 @@ export default function Frame({ children }) {
         >
           <BottomNavigation
             value={bottomNav}
-            onChange={(event, newValue) => {
-              setBottomNav(newValue);
-              // Urutan baru: 0 = AR, 1 = Home, 2 = Materi
-              if (newValue === 0) navigate("/ar");
-              if (newValue === 1) navigate("/");
-              if (newValue === 2) navigate("/materi");
-            }}
+            onChange={handleBottomNavChange}
             showLabels
           >
             <BottomNavigationAction
