@@ -18,17 +18,17 @@ const arList = [
   {
     title: "Resistor",
     desc: "Lihat bentuk dan warna resistor secara 3D melalui AR.",
-    embed: "https://mywebar.com/p/Project_2_resistor",
+    embed: "https://mywebar.com/p/Project_2_f4jtt1wzi9",
   },
   {
     title: "LED",
     desc: "Pelajari LED dan cara kerjanya dengan tampilan AR.",
-    embed: "https://mywebar.com/p/Project_3_led",
+    embed: "https://mywebar.com/p/Project_3_f8bxc27dui",
   },
   {
     title: "Rangkaian Sederhana",
     desc: "Simulasi rangkaian elektronik sederhana dalam AR.",
-    embed: "https://mywebar.com/p/Project_4_rangkaian",
+    embed: "https://mywebar.com/p/Project_0_138wrygm2r",
   },
 ];
 
