@@ -34,6 +34,9 @@ const Home = () => {
           Coba AR
         </Button>
       </Stack>
+      <Typography sx={{ mt: 6 }} color="text.secondary" variant="body2">
+        by Farid Anwar Amanullah (22518244024)
+      </Typography>
     </Box>
   );
 };
