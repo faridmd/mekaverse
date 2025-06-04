@@ -49,7 +49,7 @@ export default function Materi() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{ p: 2, pb: 8 }}>
       <Typography variant="h4" gutterBottom>
         Materi Mekatronika Kelas X
       </Typography>
