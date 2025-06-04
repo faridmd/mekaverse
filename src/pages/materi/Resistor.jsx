@@ -1,9 +1,20 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import resistorImg from "../../img/resistor.png";
 
 export default function Resistor() {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{ p: 2, pb: 8 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+        <img
+          src={resistorImg}
+          alt="Resistor"
+          style={{ maxHeight: 120, objectFit: "contain", borderRadius: 8 }}
+        />
+      </Box>
       <Typography variant="h4" gutterBottom>Resistor</Typography>
       <Typography variant="h6" gutterBottom>Sejarah</Typography>
       <Typography paragraph>

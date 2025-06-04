@@ -1,9 +1,20 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import breadboardImg from "../../img/breadboard.jpg";
 
 export default function Breadboard() {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{ p: 2, pb: 8 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+        <img
+          src={breadboardImg}
+          alt="Breadboard"
+          style={{ maxHeight: 120, objectFit: "contain", borderRadius: 8 }}
+        />
+      </Box>
       <Typography variant="h4" gutterBottom>Breadboard</Typography>
       <Typography variant="h6" gutterBottom>Sejarah</Typography>
       <Typography paragraph>

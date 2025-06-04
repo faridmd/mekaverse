@@ -1,9 +1,20 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import potensiometerImg from "../../img/potentiometer.jpg";
 
 export default function Potensiometer() {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{ p: 2, pb: 8 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+        <img
+          src={potensiometerImg}
+          alt="Potensiometer"
+          style={{ maxHeight: 120, objectFit: "contain", borderRadius: 8 }}
+        />
+      </Box>
       <Typography variant="h4" gutterBottom>Potensiometer</Typography>
       <Typography variant="h6" gutterBottom>Sejarah</Typography>
       <Typography paragraph>
